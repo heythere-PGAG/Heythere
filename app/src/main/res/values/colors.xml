@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#cb202d</color>
     <color name="colorPrimaryDark">#cb202d</color>
-    <color name="colorAccent">#03A9F4</color>
+    <color name="colorAccent">#0EB546</color>
     <color name="beaconblue">#03A9F4</color>
     <color name="redbeacon">#F90000</color>
     <color name="line">#4b777777</color>

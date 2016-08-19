@@ -190,11 +190,13 @@ public class EventsMap extends AppCompatActivity implements ConnectionCallbacks,
         if (filters.optBoolean("free") && filters.optBoolean("paid"))
             cost="";
 
-        if (filters.optBoolean("business")){ if (category.equals("")) category = "'Business'";else category = ",'Business'";}
-        else if (filters.optBoolean("parties")){ if (category.equals("")) category = "'Parties'";else category = ",'Parties'";}
-        else if (filters.optBoolean("sports")){ if (category.equals("")) category = "'Sports'";else category = ",'Sports'";}
-        else if (filters.optBoolean("festival")){ if (category.equals("")) category = "'Festival'";else category = ",'Festival'";}
-        else if (filters.optBoolean("college")){ if (category.equals("")) category = "'College'";else category = ",'College'";}
+        if (filters.optBoolean("business")){ if (category.equals("")) category = "'Business'";else category = category+",'Business'";}
+        if (filters.optBoolean("parties")){ if (category.equals("")) category = "'Parties'";else category = category+",'Parties'";}
+        if (filters.optBoolean("sports")){ if (category.equals("")) category = "'Sports'";else category = category+",'Sports'";}
+        if (filters.optBoolean("festival")){ if (category.equals("")) category = "'Festival'";else category = category+",'Festival'";}
+        if (filters.optBoolean("college")){ if (category.equals("")) category = "'College'";else category = category+ ",'College'";}
+
+        Log.e("filters",category);
 
         final ProgressDialog dialog = new ProgressDialog(this);
         dialog.setMessage("Loading...");

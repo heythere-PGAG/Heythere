@@ -1,20 +1,24 @@
 package in.heythere.heythere;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class Filters extends AppCompatActivity {
+public class Filters extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener, View.OnClickListener {
 
     RadioButton distance,likes,recent;
     JSONObject filter_value = new JSONObject();
     CheckBox free,paid,business,festival,sports,parties,college;
+    TextView distance_text,rating_text,recent_text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +31,10 @@ public class Filters extends AppCompatActivity {
         recent = (RadioButton)findViewById(R.id.recent);
         likes = (RadioButton)findViewById(R.id.rating);
 
+        distance_text = (TextView)findViewById(R.id.distance_text);
+        rating_text = (TextView)findViewById(R.id.rating_text);
+        recent_text = (TextView)findViewById(R.id.recent_text);
+
         free = (CheckBox) findViewById(R.id.free);
         paid = (CheckBox) findViewById(R.id.paid);
         business = (CheckBox) findViewById(R.id.business);
@@ -34,6 +42,10 @@ public class Filters extends AppCompatActivity {
         sports = (CheckBox) findViewById(R.id.sports);
         parties = (CheckBox) findViewById(R.id.parties);
         college = (CheckBox) findViewById(R.id.college);
+
+        distance.setOnClickListener(this);
+        recent.setOnClickListener(this);
+        likes.setOnClickListener(this);
 
         try {
             filter_value.put("free",false);
@@ -97,5 +109,33 @@ public class Filters extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.distance){
+            likes.setChecked(false);
+            recent.setChecked(false);
+            distance_text.setTextColor(Color.parseColor("#0EB546"));
+            recent_text.setTextColor(Color.parseColor("#8F9EA8"));
+            rating_text.setTextColor(Color.parseColor("#8F9EA8"));
+        }else if (view.getId() == R.id.rating){
+            distance.setChecked(false);
+            recent.setChecked(false);
+            rating_text.setTextColor(Color.parseColor("#0EB546"));
+            recent_text.setTextColor(Color.parseColor("#8F9EA8"));
+            distance_text.setTextColor(Color.parseColor("#8F9EA8"));
+        }else if (view.getId() == R.id.recent){
+            distance.setChecked(false);
+            likes.setChecked(false);
+            recent_text.setTextColor(Color.parseColor("#0EB546"));
+            distance_text.setTextColor(Color.parseColor("#8F9EA8"));
+            rating_text.setTextColor(Color.parseColor("#8F9EA8"));
+        }
     }
 }
