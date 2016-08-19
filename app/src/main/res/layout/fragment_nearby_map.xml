@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/content_view">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#58151414"
+            android:id="@+id/map_view"
+            android:layout_weight="0.5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e6e6e6"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+                android:textSize="12sp"
+                android:layout_weight="1"
+                android:id="@+id/count"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:paddingRight="10dp"
+                android:paddingEnd="10dp"
+                android:text="CLOSE"
+                android:textSize="12sp"
+                android:textColor="#777777"
+                android:layout_weight="1"
+                android:id="@+id/close"
+                android:padding="2dp" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/map_list"
+            android:background="#f1f6f7"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

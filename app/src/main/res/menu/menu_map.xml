@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/search"
+        android:orderInCategory="100"
+        android:title=""
+        android:icon="@drawable/map_search"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/filter"
+        android:orderInCategory="100"
+        android:title=""
+        android:icon="@drawable/map_filter"
+        app:showAsAction="ifRoom"/>
+</menu>

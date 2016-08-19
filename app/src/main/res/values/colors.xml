@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#cb202d</color>
+    <color name="colorPrimaryDark">#cb202d</color>
+    <color name="colorAccent">#03A9F4</color>
+    <color name="beaconblue">#03A9F4</color>
+    <color name="redbeacon">#F90000</color>
+    <color name="line">#4b777777</color>
+    <color name="business">#8629be</color>
+    <color name="college">#1368ce</color>
+    <color name="sports">#05a65d</color>
+    <color name="festival">#e94408</color>
+    <color name="parties">#0a83e7</color>
+</resources>

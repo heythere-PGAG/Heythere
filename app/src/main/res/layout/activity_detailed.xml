@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="in.heythere.heythere.Detailed">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:expandedTitleGravity="top|left"
+            android:fitsSystemWindows="true"
+            app:expandedTitleTextAppearance="@style/titleText"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:fitsSystemWindows="true"
+                android:id="@+id/cover"
+                android:scaleType="centerCrop"
+                android:tint="#a2000000"
+                android:src="@drawable/crowd"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="top">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DJ Bash"
+                    android:textSize="25sp"
+                    android:id="@+id/title"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="50dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title"
+                    android:id="@+id/venue"
+                    android:text="The Residency, Coimbatore"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/venue"
+                    android:id="@+id/date"
+                    android:text="12th July 2016"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:id="@+id/line1"
+                    android:layout_below="@+id/date"
+                    android:layout_marginTop="40dp"
+                    android:background="#a6ffffff"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/call"
+                    android:layout_below="@+id/line1"
+                    android:drawableLeft="@drawable/phone"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginLeft="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/location"
+                    android:layout_below="@+id/line1"
+                    android:layout_toRightOf="@+id/call"
+                    android:drawableLeft="@drawable/tracker"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginLeft="20dp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/like_back"
+                    android:layout_below="@+id/line1"
+                    android:layout_toRightOf="@+id/call"
+                    android:layout_marginTop="35dp"
+                    android:id="@+id/like"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/whiteheart"
+                    android:layout_below="@+id/line1"
+                    android:text="305 interested"
+                    android:textColor="#ffffff"
+                    android:drawablePadding="20dp"
+                    android:layout_toRightOf="@+id/location"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="12sp"
+                    android:gravity="center_vertical" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_detailed"/>
+
+</android.support.design.widget.CoordinatorLayout>

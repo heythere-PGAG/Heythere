@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="in.heythere.heythere.Detailed"
+    tools:showIn="@layout/activity_detailed">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FREE"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="center_horizontal"
+            android:textColor="#ffffff"
+            android:background="@color/colorPrimary"
+            android:id="@+id/event_status"
+            android:layout_margin="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:id="@+id/desctitle"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_below="@+id/event_status"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textColor="#000000"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:id="@+id/description"
+            android:textColor="#777777"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:layout_below="@+id/desctitle"
+            android:text="@string/large_text"
+            android:layout_marginTop="10dp" />
+
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

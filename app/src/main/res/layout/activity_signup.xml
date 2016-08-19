@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#a8eef6f7"
+    android:fitsSystemWindows="true"
+    tools:context="in.heythere.heythere.SignupActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:id="@+id/toolbar"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/info"
+            android:textSize="12sp"
+            android:layout_marginTop="30dp"
+            android:text="SIGN UP WITH YOUR EMAIL"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/name_error"
+            android:layout_marginLeft="20sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="10dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Display name"
+            android:textSize="12sp"
+            android:inputType="textEmailAddress"
+            android:id="@+id/name"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:typeface="sans"
+            android:background="@drawable/textfield_back"
+            android:padding="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/email_error"
+            android:layout_marginLeft="20sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="10dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email Address"
+            android:textSize="12sp"
+            android:inputType="textEmailAddress"
+            android:id="@+id/email"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:typeface="sans"
+            android:background="@drawable/textfield_back"
+            android:padding="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password_error"
+            android:layout_marginLeft="20sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="10dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textSize="12sp"
+            android:inputType="textPassword"
+            android:id="@+id/password"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:typeface="sans"
+            android:background="@drawable/textfield_back"
+            android:padding="10dp" />
+
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="#ffffff"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="SIGN UP"
+            android:id="@+id/submit"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/forgotpassword"
+            android:gravity="center_horizontal"
+            android:textSize="12sp"
+            android:layout_marginTop="20dp"
+            android:text="Already a member? Log in"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/or"
+            android:gravity="center_horizontal"
+            android:textSize="12sp"
+            android:layout_marginTop="20dp"
+            android:text="OR"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/fb_backup"
+            android:id="@+id/fb_signup"
+            android:text="Sign up with Facebook" />
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

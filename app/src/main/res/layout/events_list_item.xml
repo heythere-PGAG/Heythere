@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="6dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="0dp"
+        app:cardMaxElevation="6dp"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:src="@drawable/crowd"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/poster"
+                    android:contentDescription="" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/name"
+                    android:text="Pokemon Go"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"
+                    android:paddingLeft="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawableStart="@drawable/pin"
+                    android:drawableLeft="@drawable/pin"
+                    android:drawablePadding="3dp"
+                    android:text="Codissia, Coimbatore"
+                    android:id="@+id/venue"
+                    android:layout_marginBottom="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/venue"
+                    android:layout_marginLeft="10dp"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@drawable/time"
+                    android:drawableLeft="@drawable/time"
+                    android:layout_marginBottom="10dp"
+                    android:text="27th Jul"
+                    android:id="@+id/date"
+                    android:paddingLeft="2dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#32777777"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/like_back"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:id="@+id/like"/>
+
+                <TextView
+                    android:id="@+id/count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/like"
+                    android:layout_toEndOf="@+id/like"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:text="10" />
+
+            <TextView
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/share"
+                android:drawableStart="@drawable/share"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:drawablePadding="7dp"
+                android:padding="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

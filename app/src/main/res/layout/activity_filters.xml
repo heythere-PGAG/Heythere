@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_filters"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.heythere.heythere.Filters">
+
+    <CheckBox
+        android:text="Free"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/free"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="@+id/activity_filters"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_filters"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_filters"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="@+id/activity_filters"
+        android:layout_marginRight="16dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:text="Paid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/paid"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="@+id/activity_filters"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/free"
+        android:layout_marginLeft="16dp" />
+
+    <CheckBox
+        android:text="Business"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/business"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_filters"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/paid"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="@+id/activity_filters"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_filters"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:text="Sports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sports"
+        app:layout_constraintRight_toRightOf="@+id/activity_filters"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/business"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_filters"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp" />
+
+    <CheckBox
+        android:text="College"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/college"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_filters"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/sports" />
+
+    <CheckBox
+        android:text="Parties"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/parties"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/college"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_filters"
+        android:layout_marginLeft="16dp" />
+
+    <CheckBox
+        android:text="Festival"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/festival"
+        android:layout_marginStart="16dp"
+        app:layout_constraintRight_toRightOf="@+id/college"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/parties"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_filters"
+        android:layout_marginLeft="16dp" />
+    <RadioGroup
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/festival"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_filters"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="@+id/activity_filters"
+        android:layout_marginRight="16dp">
+
+        <RadioButton
+            android:text="Distance"
+            android:layout_weight="1"
+            android:button="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/distance"
+            android:gravity="center_horizontal"
+            android:checked="true" />
+
+        <RadioButton
+            android:text="Rating"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/rating" />
+
+        <RadioButton
+            android:text="Recent"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/recent" />
+
+    </RadioGroup>
+
+    <Button
+        android:text="APPLY"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/apply"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_filters"
+        app:layout_constraintRight_toRightOf="@+id/activity_filters"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_filters"
+        android:background="#b50f9c10"
+        android:textColor="#ffffff" />
+
+</android.support.constraint.ConstraintLayout>

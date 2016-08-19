@@ -1,0 +1,294 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Me"
+    android:background="#a8e6e1e1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/before_login"
+            android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GET STARTED"
+            android:textColor="#777777"
+            android:textSize="12sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/unlock"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:background="#f1f4f0f0"
+            android:text="Log In or Sign Up"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            android:padding="15dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/login_signup" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUPPORT"
+            android:textColor="#777777"
+            android:textSize="12sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/shareus"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:background="#f1f4f0f0"
+            android:text="Invite Friends to Heythere"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            android:padding="15dp"
+            android:layout_marginTop="10dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/aboutus"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:background="#f1f4f0f0"
+            android:text="About"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            android:padding="15dp"
+            android:layout_marginTop="1dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/rateus"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:background="#f1f4f0f0"
+            android:text="Rate us on Play Store"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            android:padding="15dp"
+            android:layout_marginTop="1dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/after_login"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:fitsSystemWindows="true"
+                    android:id="@+id/cover"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/crowd" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/cover_fromt"/>
+
+                <RelativeLayout
+                    android:layout_width="61dp"
+                    android:layout_height="61dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/dp_back"
+                    android:padding="1dp"
+                    android:background="@drawable/round">
+
+                    <ImageView
+                        android:src="@mipmap/ic_launcher"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/name"
+                    android:text="Gowtham Shri"
+                    android:layout_below="@+id/dp_back"
+                    android:textColor="#ffffff"
+                    android:textStyle="normal"
+                    android:typeface="normal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/name"
+                    android:id="@+id/follow"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="71 followers"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"
+                        android:id="@+id/followers"
+                        android:paddingRight="10dp"
+                        android:paddingEnd="10dp"
+                        android:gravity="right"
+                        android:layout_weight="1"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:background="#ffffff"
+                        android:layout_height="15dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="71 following"
+                        android:id="@+id/following"
+                        android:textColor="#ffffff"
+                        android:paddingLeft="10dp"
+                        android:paddingStart="10dp"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="71"
+                        android:textColor="#777777"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:id="@+id/likecount"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="LIKES"
+                        android:textColor="#777777"
+                        android:textSize="11sp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:id="@+id/likes" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="#44777777" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="87"
+                        android:textColor="#777777"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:id="@+id/topics_count"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DISCUSSIONS"
+                        android:textColor="#777777"
+                        android:textSize="11sp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:id="@+id/discussions" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="#44777777" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="43"
+                        android:textColor="#777777"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:id="@+id/comment_count"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="LIKES"
+                        android:textColor="#777777"
+                        android:textSize="11sp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:id="@+id/comments" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#44777777" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

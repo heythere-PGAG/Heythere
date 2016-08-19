@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.heythere.heythere.LoginInfo"
+    android:background="#a8e6e1e1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:id="@+id/info"
+        android:background="#ffffff">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/cover"
+        android:scaleType="centerCrop"
+        android:src="@drawable/joker"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cover"
+        android:id="@+id/ticket"
+        android:drawablePadding="10dp"
+        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/ticket"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ticket"
+        android:id="@+id/offer"
+        android:drawablePadding="10dp"
+        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/offer"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/offer"
+        android:drawablePadding="10dp"
+        android:id="@+id/discussion"
+        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
+        android:layout_marginTop="25dp"
+        android:drawableLeft="@drawable/chat"
+        android:textColor="#000000" />
+
+        </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/own_auth"
+        android:layout_below="@+id/info">
+
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/auth_back"
+            android:textColor="#000000"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:id="@+id/login"
+            android:text="Login"
+            android:layout_weight="1" />
+
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/auth_back"
+            android:textColor="#000000"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/signup"
+            android:text="Signup"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/own_auth"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="#ffffff"
+        android:background="@drawable/fb_backup"
+        android:id="@+id/fb_login"
+        android:text="Login with Facebook" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textColor="#000000"
+            android:layout_alignParentBottom="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="center_horizontal"
+            android:id="@+id/cancel"/>
+
+</RelativeLayout>

@@ -1,0 +1,249 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:descendantFocusability="beforeDescendants"
+    android:id="@+id/scrollView"
+    tools:context=".fragments.Events">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutDots"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="-50dp"
+        android:gravity="end" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Plan your next outing"
+                android:layout_marginTop="35dp"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"/>
+
+            <View
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:baselineAligned="false">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/all"
+                        android:drawablePadding="10dp"
+                        android:text="ALL"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:id="@+id/all" />
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/line"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/business"
+                        android:drawablePadding="10dp"
+                        android:text="BUSINESS"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:id="@+id/business" />
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/line"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/parties"
+                        android:drawablePadding="10dp"
+                        android:text="PARTIES"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:id="@+id/parties" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:baselineAligned="false">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/college"
+                        android:drawablePadding="10dp"
+                        android:text="COLLEGE"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:id="@+id/college" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/line"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/festival"
+                        android:drawablePadding="10dp"
+                        android:text="FESTIVAL"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:id="@+id/festival" />
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/line"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/sports"
+                        android:drawablePadding="10dp"
+                        android:text="SPORTS"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:id="@+id/sports" />
+
+            </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Browse nearby events"
+                android:textAllCaps="false"
+                android:id="@+id/map"
+                android:background="@drawable/button_near"
+                android:drawablePadding="10dp"
+                android:textColor="#777777"
+                android:drawableLeft="@drawable/near"
+                android:drawableStart="@drawable/near"
+                android:drawableRight="@drawable/go"
+                android:drawableEnd="@drawable/go"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+                android:paddingRight="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="13dp"
+                android:paddingBottom="13dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical" />
+
+        <View
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This week"
+            android:padding="10dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recent"/>
+
+<!--        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line"/>-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="#fafafa"
+            android:textColor="@color/colorPrimary"
+            android:paddingRight="10dp"
+            android:text="See more >>"
+            android:gravity="end"/>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Trending"
+            android:padding="10dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nearby"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="#fafafa"
+            android:textColor="@color/colorPrimary"
+            android:paddingRight="10dp"
+            android:text="See more >>"
+            android:gravity="end"
+            android:id="@+id/nearbymore"/>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line"/>
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

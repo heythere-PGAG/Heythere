@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#a8eef6f7"
+    android:fitsSystemWindows="true"
+    tools:context="in.heythere.heythere.LoginActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:id="@+id/toolbar"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/info"
+            android:textSize="12sp"
+            android:layout_marginTop="30dp"
+            android:text="LOGIN WITH YOUR HEYTHERE ACCOUNT"
+            android:layout_marginLeft="20dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email Address"
+        android:textSize="12sp"
+        android:layout_below="@+id/info"
+        android:inputType="textEmailAddress"
+        android:id="@+id/email"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:typeface="sans"
+        android:background="@drawable/textfield_back"
+        android:padding="10dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:textSize="12sp"
+        android:inputType="textPassword"
+        android:layout_below="@+id/email"
+        android:id="@+id/password"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:typeface="sans"
+        android:background="@drawable/textfield_back"
+        android:padding="10dp" />
+    <Button
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColor="#ffffff"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Login"
+        android:layout_below="@+id/password"
+        android:id="@+id/login"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/forgotpassword"
+            android:gravity="center_horizontal"
+            android:textSize="12sp"
+            android:layout_marginTop="20dp"
+            android:text="Forgot password?"
+            android:layout_below="@+id/login"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/or"
+            android:gravity="center_horizontal"
+            android:textSize="12sp"
+            android:layout_marginTop="20dp"
+            android:text="OR"
+            android:layout_below="@+id/forgotpassword"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/or"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/fb_backup"
+            android:id="@+id/fb_login"
+            android:text="Login with Facebook" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
