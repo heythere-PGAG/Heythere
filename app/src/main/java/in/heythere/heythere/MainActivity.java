@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 case 1:
                     return "EXPLORE";
                 case 2:
-                    return "WHATS'UP";
+                    return "TALK";
                 case 3:
                     return "ME";
             }

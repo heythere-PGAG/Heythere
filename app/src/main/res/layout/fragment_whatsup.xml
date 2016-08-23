@@ -1,14 +1,47 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.Whatsup">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/section_label"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout">
 
-</FrameLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:srcCompat="@drawable/crowd"
+                android:scaleType="centerCrop" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_marginTop="22dp"
+        android:text="Hot talk's"
+        android:textAlignment="viewStart"
+        android:textStyle="normal|bold"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/hot_title" />
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/region"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_marginTop="22dp"
+        android:spinnerMode="dialog"
+        android:dropDownWidth="match_parent"
+        android:entries="@array/cities"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

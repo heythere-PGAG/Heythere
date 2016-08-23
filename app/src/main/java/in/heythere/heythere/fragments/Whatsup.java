@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import in.heythere.heythere.R;
+import in.heythere.heythere.Utilities.Tools;
 
 
 public class Whatsup extends Fragment {
