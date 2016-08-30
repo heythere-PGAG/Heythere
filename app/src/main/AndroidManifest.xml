@@ -44,8 +44,7 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
             android:name=".PullData"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
 
         <provider
             android:name=".providers.EventDataProvider"
@@ -75,7 +74,8 @@
         <activity
             android:name=".SearchEvent"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Filters"></activity>
+        <activity android:name=".Filters" />
+        <activity android:name=".DiscussionArea"></activity>
     </application>
 
 </manifest>
