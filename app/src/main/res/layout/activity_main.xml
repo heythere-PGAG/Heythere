@@ -1,44 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="in.heythere.heythere.MainActivity">
+    android:fitsSystemWindows="false">
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:id="@+id/layout">
+
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay">
+            app:theme="@style/AppTheme.AppBarOverlay"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:contentInsetStart="0dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/constraint"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="10sp"
+                    app:layout_constraintTop_toTopOf="@+id/constraint"
+                    android:paddingLeft="5dp"
+                    android:paddingStart="5dp"
+                    android:id="@+id/location_text"
+                    android:text="YOUR LOCATION"
+                    android:layout_marginTop="10dp" />
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/city"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintTop_toBottomOf="@+id/location_text" />
+
+            </android.support.constraint.ConstraintLayout>
 
         </android.support.v7.widget.Toolbar>
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tab"
+            android:layout_below="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:tabIndicatorHeight="2dp"
-            app:tabIndicatorColor="#FFFFFF"/>
+            app:tabIndicatorHeight="3dp"
+            app:tabTextColor="#777777"
+            app:tabSelectedTextColor="#000000"
+            app:tabIndicatorColor="@color/colorPrimary"
+            android:background="#ffffff" />
+    </RelativeLayout>
 
-    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_below="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-    <include layout="@layout/content_main"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#d2000000"
+        android:id="@+id/back_dark"
+        android:visibility="gone" />
 
-    <!--<android.support.design.widget.FloatingActionButton-->
-        <!--android:id="@+id/fab"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="end|bottom"-->
-        <!--android:layout_margin="@dimen/fab_margin"-->
-        <!--android:src="@android:drawable/ic_dialog_email" />-->
+    <com.github.fafaldo.fabtoolbar.widget.FABToolbarLayout
+        android:id="@+id/fabtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:showDuration="600"
+        app:hideDuration="200"
+        app:horizontalMargin="16dp"
+        app:verticalMargin="16dp"
+        app:fadeInFraction="0.9"
+        app:fabId="@+id/fabtoolbar_fab"
+        app:containerId="@+id/fabtoolbar_container"
+        app:fabToolbarId="@+id/fabtoolbar_toolbar">
 
-</android.support.design.widget.CoordinatorLayout>
+        <RelativeLayout
+            android:id="@+id/fabtoolbar_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabtoolbar_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fabSize="normal"
+                app:backgroundTint="@color/colorPrimary"
+                app:rippleColor="@color/colorPrimaryDark"
+                android:src="@drawable/add"/>
+
+        </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/fabtoolbar_toolbar"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/add_event"
+                    android:drawablePadding="5dp"
+                    android:text="Add an event"
+                    android:layout_weight="1"
+                    android:textSize="10sp"
+                    android:textAlignment="center" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/add_offer"
+                    android:drawablePadding="5dp"
+                    android:text="Add a deal"
+                    android:layout_weight="1"
+                    android:textSize="10sp"
+                    android:textAlignment="center" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add a discussion"
+                    android:drawableTop="@drawable/write"
+                    android:drawablePadding="5dp"
+                    android:layout_weight="1"
+                    android:textSize="10sp"
+                    android:textAlignment="center" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rate us"
+                    android:drawableTop="@drawable/rate_us"
+                    android:drawablePadding="5dp"
+                    android:layout_weight="1"
+                    android:textSize="10sp"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+    </com.github.fafaldo.fabtoolbar.widget.FABToolbarLayout>
+
+</RelativeLayout>

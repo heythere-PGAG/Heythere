@@ -2,13 +2,19 @@ package in.heythere.heythere;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatSpinner;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.ArrayAdapter;
+
+import com.github.fafaldo.fabtoolbar.widget.FABToolbarLayout;
 
 import in.heythere.heythere.fragments.Events;
 import in.heythere.heythere.fragments.Explore;
@@ -17,6 +23,9 @@ import in.heythere.heythere.fragments.Whatsup;
 
 public class MainActivity extends AppCompatActivity {
 
+    FABToolbarLayout layout;
+    View layer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        AppCompatSpinner cities = (AppCompatSpinner)toolbar.findViewById(R.id.city);
+        cities.setAdapter(new ArrayAdapter(this,R.layout.city_menu_dropdown,getResources().getStringArray(R.array.cities)));
 
         final SectionsPagerAdapter mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
@@ -36,19 +48,43 @@ public class MainActivity extends AppCompatActivity {
         mViewPager.setAdapter(mSectionsPagerAdapter);
         tab.setupWithViewPager(mViewPager);
 
-/*        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        assert fab != null;
+        layer = findViewById(R.id.back_dark);
+
+        layer.getLayoutParams().height = getWindowManager().getDefaultDisplay().getHeight();
+        layer.getLayoutParams().width = getWindowManager().getDefaultDisplay().getWidth();
+
+        layout = (FABToolbarLayout)findViewById(R.id.fabtoolbar);
+
+        FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fabtoolbar_fab);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                layout.show();
+                layer.setVisibility(View.VISIBLE);
             }
-        });*/
+        });
 
+        layer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                layer.setVisibility(View.GONE);
+                layout.hide();
+            }
+        });
     }
 
-     class SectionsPagerAdapter extends FragmentPagerAdapter {
+    @Override
+    public void onBackPressed() {
+        if (!layout.isFab()){
+            layer.setVisibility(View.GONE);
+            layout.hide();
+        }else {
+            super.onBackPressed();
+        }
+    }
+
+    class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         SectionsPagerAdapter(FragmentManager fm) {
             super(fm);

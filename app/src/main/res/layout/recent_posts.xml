@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="10dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="10dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/constraint">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/constraint"
+            app:layout_constraintLeft_toLeftOf="@+id/constraint"
+            android:id="@+id/user_profile">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/user_pic"
+                android:src="@mipmap/ic_launcher"
+                android:layout_margin="5dp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Poornima Haridas"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@id/user_pic"
+                android:layout_toRightOf="@+id/user_pic"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/user_name"
+                android:textColor="#434343"
+                app:textAllCaps="false"
+                android:textStyle="normal|bold"
+                android:textSize="14sp" />
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/followers_count"
+                android:text="21 FOLLOWERS"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@id/user_pic"
+                android:layout_toRightOf="@+id/user_pic"
+                android:layout_below="@+id/user_name"
+                android:textSize="10sp"
+                android:textColor="#76828b" />
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/topics_count"
+                android:text="21 DISCUSSIONS"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/followers_count"
+                android:layout_toRightOf="@+id/followers_count"
+                android:layout_below="@+id/user_name"
+                android:textSize="10sp"
+                android:textColor="#76828b" />
+            <android.support.v7.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/follow_back"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/add_friend"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:id="@+id/line"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="3dp"
+            android:background="#3076828b"
+            app:layout_constraintLeft_toLeftOf="@+id/constraint"
+            app:layout_constraintRight_toRightOf="@+id/constraint"
+            app:layout_constraintTop_toBottomOf="@+id/user_profile"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/line"
+            app:layout_constraintRight_toRightOf="@+id/constraint"
+            app:layout_constraintLeft_toLeftOf="@+id/constraint"
+            android:text="Anybody interested for ride?"
+            android:id="@+id/title"
+            android:textColor="#434343"
+            android:textSize="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="normal|bold" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintLeft_toLeftOf="@+id/constraint"
+            app:layout_constraintRight_toRightOf="@+id/constraint"
+            android:singleLine="true"
+            android:textSize="13sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/subject"
+            android:text="Hey guys, anyone is up for a bike ride to ooty? Loving the climate. Let's brum brum tonight." />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:id="@+id/topic_poster"
+            android:src="@drawable/crowd"
+            app:layout_constraintTop_toBottomOf="@+id/subject"
+            app:layout_constraintLeft_toLeftOf="@+id/constraint"
+            app:layout_constraintRight_toRightOf="@+id/constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            app:layout_constraintLeft_toLeftOf="@+id/constraint"
+            app:layout_constraintTop_toBottomOf="@+id/topic_poster"
+            android:id="@+id/counts">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/like_count"
+                android:text="2 Likes ."
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:textSize="10sp"
+                android:textColor="#76828b" />
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/response_count"
+                android:text=" 21 Responses"
+                android:layout_toEndOf="@id/like_count"
+                android:layout_toRightOf="@+id/like_count"
+                android:textSize="10sp"
+                android:textColor="#76828b" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:id="@+id/line2"
+            android:layout_marginTop="7dp"
+            android:background="#3076828b"
+            app:layout_constraintLeft_toLeftOf="@+id/constraint"
+            app:layout_constraintRight_toRightOf="@+id/constraint"
+            app:layout_constraintTop_toBottomOf="@+id/counts"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/options"
+            app:layout_constraintTop_toBottomOf="@+id/line2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:paddingTop="13dp"
+                android:paddingBottom="13dp"
+                android:orientation="horizontal"
+                android:id="@+id/like_layout">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/like_discussion_back"
+                    android:id="@+id/like" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/like_discussion"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center_horizontal"
+                    android:text="Like"/>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="0.5dp"
+                android:background="#3076828b"
+                android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:orientation="horizontal"
+            android:id="@+id/reply_layout">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/reply_back"
+                android:drawableLeft="@drawable/reply_back"
+                android:id="@+id/reply_discussion"
+                android:text="Reply"/>
+
+        </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:background="#3076828b"
+                android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:orientation="horizontal"
+            android:id="@+id/share_layout">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:id="@+id/share_discussion"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/share_discussion"
+                android:drawableLeft="@drawable/share_discussion"
+                android:text="Share"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:id="@+id/line3"
+            android:background="#3076828b"
+            app:layout_constraintTop_toBottomOf="@+id/options"
+            app:layout_constraintLeft_toLeftOf="@+id/constraint"
+            app:layout_constraintRight_toRightOf="@+id/constraint"/>
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>

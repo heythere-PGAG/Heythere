@@ -2,7 +2,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#ffffff"
     android:descendantFocusability="beforeDescendants"
     android:id="@+id/scrollView"
@@ -32,6 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Plan your next outing"
+                android:textColor="#76828b"
                 android:layout_marginTop="35dp"
                 android:gravity="left"
                 android:paddingLeft="10dp"
@@ -56,6 +56,7 @@
                         android:drawablePadding="10dp"
                         android:text="ALL"
                         android:gravity="center_horizontal"
+                        android:textColor="#76828b"
                         android:layout_weight="1"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
@@ -71,6 +72,7 @@
                         android:drawableTop="@drawable/business"
                         android:drawablePadding="10dp"
                         android:text="BUSINESS"
+                        android:textColor="#76828b"
                         android:gravity="center_horizontal"
                         android:layout_weight="1"
                         android:paddingTop="10dp"
@@ -87,6 +89,7 @@
                         android:drawableTop="@drawable/parties"
                         android:drawablePadding="10dp"
                         android:text="PARTIES"
+                        android:textColor="#76828b"
                         android:gravity="center_horizontal"
                         android:layout_weight="1"
                         android:paddingTop="10dp"
@@ -110,6 +113,7 @@
                         android:drawableTop="@drawable/college"
                         android:drawablePadding="10dp"
                         android:text="COLLEGE"
+                        android:textColor="#76828b"
                         android:gravity="center_horizontal"
                         android:layout_weight="1"
                         android:paddingTop="10dp"
@@ -129,6 +133,7 @@
                         android:text="FESTIVAL"
                         android:gravity="center_horizontal"
                         android:layout_weight="1"
+                        android:textColor="#76828b"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
                         android:id="@+id/festival" />
@@ -141,6 +146,7 @@
                         android:layout_height="wrap_content"
                         android:drawableTop="@drawable/sports"
                         android:drawablePadding="10dp"
+                        android:textColor="#76828b"
                         android:text="SPORTS"
                         android:gravity="center_horizontal"
                         android:layout_weight="1"
@@ -162,7 +168,7 @@
                 android:id="@+id/map"
                 android:background="@drawable/button_near"
                 android:drawablePadding="10dp"
-                android:textColor="#777777"
+                android:textColor="#76828b"
                 android:drawableLeft="@drawable/near"
                 android:drawableStart="@drawable/near"
                 android:drawableRight="@drawable/go"
@@ -186,6 +192,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="This week"
+            android:textColor="#76828b"
             android:padding="10dp"/>
 
         <android.support.v7.widget.RecyclerView
@@ -219,6 +226,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Trending"
+            android:textColor="#76828b"
             android:padding="10dp"/>
 
         <android.support.v7.widget.RecyclerView

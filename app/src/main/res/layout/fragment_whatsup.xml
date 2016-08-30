@@ -1,47 +1,79 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0276828b"
     tools:context=".fragments.Whatsup">
 
-    <RelativeLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/relativeLayout">
+        android:id="@+id/constraint">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                app:srcCompat="@drawable/crowd"
-                android:scaleType="centerCrop" />
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/constraint"
+            app:layout_constraintRight_toRightOf="@+id/constraint"
+            app:layout_constraintLeft_toLeftOf="@+id/constraint"
+            android:id="@+id/relativeLayout">
 
-    </RelativeLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    app:srcCompat="@drawable/crowd"
+                    android:scaleType="centerCrop" />
 
-    <android.support.v7.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/relativeLayout"
-        android:layout_marginTop="22dp"
-        android:text="Hot talk's"
-        android:textAlignment="viewStart"
-        android:textStyle="normal|bold"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/hot_title" />
+        </RelativeLayout>
 
-    <android.support.v7.widget.AppCompatSpinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/region"
-        android:layout_below="@+id/relativeLayout"
-        android:layout_marginTop="22dp"
-        android:spinnerMode="dialog"
-        android:dropDownWidth="match_parent"
-        android:entries="@array/cities"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true" />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HOT TALKS"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+            app:layout_constraintLeft_toLeftOf="@+id/constraint"
+            android:id="@+id/hot_title"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="14sp"
+            android:textStyle="normal|bold"
+            android:textColor="#76828b" />
 
-</RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/hot_title"
+            app:layout_constraintRight_toRightOf="@+id/constraint"
+            android:id="@+id/hot_talks"
+            app:layout_constraintLeft_toLeftOf="@+id/constraint"
+            android:layout_marginTop="4dp"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/hot_talks"
+            android:text="RECENT POSTS"
+            android:id="@+id/post_text"
+            android:layout_marginTop="8dp"
+            app:layout_constraintLeft_toLeftOf="@+id/constraint"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="normal|bold"
+            android:textColor="#76828b" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recent_post"
+            app:layout_constraintTop_toBottomOf="@+id/post_text"
+            app:layout_constraintLeft_toLeftOf="@+id/constraint"
+            app:layout_constraintRight_toRightOf="@+id/constraint"
+            android:layout_marginTop="4dp"
+            android:scrollbarDefaultDelayBeforeFade="0"
+            android:scrollbarFadeDuration="0" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>
